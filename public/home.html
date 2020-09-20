@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ims-app</title>
+		<link rel="stylesheet" href="./css/home.css">
+	</head>
+	<body>
+		<div class="home">
+			<h1>Welcome you are logged in</h1>
+                  <button class="myButton" id="userProfile"> My Profile </button>
+                  <button class="myButton" id="logout"> logout </button>
+		</div>
+            <div class="category">
+                  <h1>Add category</h1>
+                  <button id="rootNode"> create root node </button>
+                  <form id="catForm" action="auth" method="POST">
+                        <input id="parentCat" type="text" name="parentCat" placeholder="Enter Parent Category" required>
+                        <input id="catName" type="text" name="catName" placeholder="Enter Category Name" required>
+                        <input type="submit">
+                  </form>
+            </div>
+
+            <div class="category">
+                  <h1>Add Products</h1>
+                  <form id="productForm" action="auth" method="POST">
+                        <input id="productName" type="text" name="productName" placeholder="Enter Product Name" required>
+                        <input id="categoryName" type="text" name="categoryName" placeholder="Enter Category Name" required>
+                        <input id="baseUnit" type="text" name="baseUnit" placeholder="Enter base unit of product" required>
+                        <input id="imagePath" type="text" name="imagePath" placeholder="Enter imagePath here" required>
+                        <input id="description" type="text" name="description" placeholder="Enter description" required>
+                        <input type="submit">
+                  </form>
+            </div>
+
+            <div>
+                  <ul class="list toggle hide" id="mainCat">MainCat
+                  </ul>
+            </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script type="text/javascript" src="./js/home.js"></script>
+	</body>
+</html>
+
